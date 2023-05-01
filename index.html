@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Bree+Serif&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <img src="icons/chat-app-logo-sms-messenger-label-design-mobile-app-online-conversation-with-texting-message-ui-design-concept-vector-illustration_172533-1513.avif" alt="" width="35px">
+                <h1>Chat App</h1>
+            </div>
+            <button type="button" ><img src="icons/hamburger-menu-line-icon-free-vector.webp" alt="" width="35px" onclick="show_hide()"></button>
+        </header>
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4 class="users-count">0</h4>
+                </div>
+                <div class="users-list">
+                    <!-- <p>Mohnish</p>
+                    <p>Ojal</p>
+                    <p>Pranjal</p> -->
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+                    <!-- <div class="user-join">
+                        <p><b>Mohnish</b> joined the chat</p>    
+                    </div> -->
+                    <!-- <div class="message incoming">
+                        <h5>Mohnish</h5>
+                        <p>Hello Pranjal</p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>Pranjal</h5>
+                        <p>Hii Darling</p>
+                    </div> -->
+                </div>
+                <div class="user-input">
+                    <input id="user-msg" type="text" placeholder="Type your message..."/>
+                    <button id="user-send" type="button">SEND</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var uwindow=document.querySelector('.users-window');
+        function show_hide() {
+            if(uwindow.style.display=="block") {
+                uwindow.style.display="none";
+            } 
+            else {
+                uwindow.style.display="block";
+            }
+        }
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+</html>
